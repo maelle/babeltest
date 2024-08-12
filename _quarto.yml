@@ -8,7 +8,7 @@ project:
 lang: en
 
 website:
-  site-url: https://df.geoviews.ch/
+  site-url: https://test.nenuial.org/
   title: "GeoDoc"
   favicon: "resources/favicon.png"
   navbar:
