@@ -1,0 +1,38 @@
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+$tightlist.tex()$
+$tables.tex()$
+$graphics.tex()$
+$citations.tex()$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+% Font setup
+\setmainfont[Extension = .otf,Path =
+$font-path$,UprightFont = *-Light,ItalicFont =
+*-LightItalic,BoldFont = *-Regular,BoldItalicFont = *-Italic]{FiraSans}
+\setsansfont[Extension = .otf,Path =
+$font-path$,UprightFont = *-Light,ItalicFont =
+*-LightItalic,BoldFont = *-Regular,BoldItalicFont = *-Italic]{FiraSans}
+\setmathfont[Path = $font-path$,Extension =
+.otf]{FiraMath-Light}
+
+% Environment that does nothing
+\newenvironment{emptyenv}{}{}
+
+\usepackage{fancyhdr}
+\fancyhf{} % clear all header and footer fields
+
+\fancyhead[L]{\includegraphics[width=2cm]{$logo$}}
+\fancyhead[C]{$doc-title$}
+\fancyhead[R]{$doc-class$}
+\fancyfoot[L]{$sign$/\the\year}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}

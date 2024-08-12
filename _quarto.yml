@@ -1,0 +1,58 @@
+project:
+  type: website
+  resources:
+    - robots.txt
+  #pre-render: 
+  #  - R/get_presentation_yaml.R
+
+lang: en
+
+website:
+  site-url: https://df.geoviews.ch/
+  title: "GeoDoc"
+  favicon: "resources/favicon.png"
+  navbar:
+    logo: "resources/logo-lddr.png"
+    background: "#2f466a"
+    left:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Discipline Fondamentale"
+        menu: 
+          - text: "Documents"
+            href: index.qmd
+
+
+  sidebar:
+    - title: "Accueil"
+      style: "floating"
+      collapse-level: 1
+      contents: 
+        - href: index.qmd
+    - section: "Discipline Fondamentale"
+      href: index.qmd
+      contents:
+        - section: "Introduction"
+          href: Introduction/index.qmd
+          contents: 
+            - section: "Documents"
+              contents: Introduction/Documents/*.qmd
+
+format:
+  html:
+    theme: 
+      dark: darkly
+      light: flatly
+    css: resources/styles.css
+    mainfont: "Fira Sans"
+    toc: true
+
+
+babelquarto:
+  languagecodes:
+  - name: fr
+    text: "Français"
+  - name: en
+    text: "English"
+  mainlanguage: 'en'
+  languages: ['fr']

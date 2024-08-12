@@ -1,0 +1,28 @@
+website:
+  navbar:
+    left:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Discipline Fondamentale"
+        menu: 
+          - text: "Documents"
+            href: index.qmd
+          - text: "Livre"
+            href: https://df.geoviews.ch/_book/fr
+      - text: "Option Complémentaire"
+        href: https://oc.geoviews.ch
+
+  sidebar:
+    - title: "Accueil"
+      style: "floating"
+      collapse-level: 1
+      contents: 
+        - href: index.qmd
+    - section: "Discipline Fondamentale"
+      href: index.qmd
+      contents:
+        - section: "Introduction"
+          href: Introduction/index.qmd
+          contents: 
+            - section: "Documents"
+              contents: Introduction/Documents/*.qmd

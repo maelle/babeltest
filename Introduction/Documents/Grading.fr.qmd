@@ -1,0 +1,31 @@
+---
+title: "Évaluations"
+subtitle: "Géographie DF"
+sign: "PBd"
+format:
+  html: default
+  lddr-doc-typst: default
+---
+
+# Cadre
+
+La DF géographie comprend 3 heures de cours  par semaine en deuxième année. La moyenne de géographie en fin de deuxième année compte pour le *certificat de maturité*.
+
+La moyenne de géographie se base sur:
+
+- 3-5 travaux écrits;
+- 1 présentation en classe;
+- 1 travail de recherche *facultatif*.
+
+# Travaux écrits
+
+Chaque chapitre fais l’objet d’une évaluation écrite. Certains chapitres peuvent être regroupés pour une évaluation. La fraction des notes des travaux écrits est le quart. Le barème appliqué correspond à la formule :
+$$\text{Notes}=\frac{\text{Points obtenus}}{\text{Points totaux}}\cdot 6$$
+
+# Présentations
+
+Les présentations se font, *en principe*, par groupes de deux. Les présentations durent 45 minutes par groupe. Les présentations font l’objet de consignes et recommandations particulières. L’évaluation des présentations se fait sur la base d’une grille qualitative. La fraction des notes des présentations est le quart. Le barème appliqué correspond au *barème fédéral*.
+ 
+# Travail de recherche
+
+Les étudiants qui désirent une note supplémentaire, peuvent effectuer un travail de recherche. Les travaux de recherche font l’objet de consignes et recommandations particulières. L’évaluation des  travaux de recherche se fait sur la base d’une grille qualitative. La fraction des notes est le quart. Le barème appliqué correspond au barème fédéral.

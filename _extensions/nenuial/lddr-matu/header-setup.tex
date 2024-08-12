@@ -1,0 +1,111 @@
+% Package for total pagenumbers (used in footer)
+\usepackage{lastpage}
+
+% Avoid large space to equalise content
+\raggedbottom
+
+% Allow for FlushRight command
+\usepackage{ragged2e}
+
+% Package for \uline{}
+\usepackage[normalem]{ulem}
+
+% Packag tabularx
+\usepackage{tabularx}
+
+% Package tabto
+\usepackage{tabto}
+
+% Package for boxex
+\usepackage[framemethod=default]{mdframed}
+\usepackage{fancybox}
+\setlength{\fboxsep}{.3cm}
+
+% Setup examdoc points
+\pointsinleftmargin
+\pointpoints{pt}{pts}
+\marginpointname{ \points}
+\pointformat{\footnotesize\boldmath\themarginpoints}
+%\boxedpoints
+\usehorizontalhalf
+\addpoints
+
+% Custom command for title
+\newcommand{\sectitle}[1]{%
+\begin{tBox}
+\begin{center}
+	\huge\textbf{\textsc{#1}}
+\end{center}
+\end{tBox}
+\vspace{.8cm}}
+
+% Box for titles
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=true,
+leftline=true,
+topline=true,
+bottomline=true,
+linecolor=black,
+backgroundcolor=black!25,
+innerleftmargin=10pt,
+innerrightmargin=10pt,
+innertopmargin=15pt,
+innerbottommargin=15pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=1pt]{tBox}
+
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=true,
+leftline=true,
+topline=true,
+bottomline=true,
+linecolor=black,
+backgroundcolor=black!5,
+innerleftmargin=6pt,
+innerrightmargin=6pt,
+innertopmargin=12pt,
+innerbottommargin=6pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=.3pt]{pressBox}
+
+% The question table environement and all its commands
+\newenvironment{questiontable}
+{\parbox{2.5cm}{\small\emph{Valeur attribuée à la question~:}}\normalsize\\[.5cm]
+\par\noindent
+\tabularx{\linewidth}{@{}p{1.8cm}|p{.2cm} X@{}}}%
+{%
+\endtabularx%
+}
+
+\newcounter{myquestion}
+\setcounter{myquestion}{1}
+
+% For complex environment
+\usepackage{environ}
+
+% For tests
+\usepackage{ifthen}
+
+\NewEnviron{exacomplex}[1][0]{%
+  \toks0=\expandafter{\BODY}%
+  \toks2={\textbf{#1 \ifthenelse{#1=1}{point}{points}} & \themyquestion\stepcounter{myquestion}. &}%
+  \xdef\TableRowContents{\the\toks2 \the\toks0 \\[.2cm]}%
+  \aftergroup\TableRowContents
+}
+
+\newcommand{\exatitle}[1]{&\multicolumn{2}{X}{\large\textbf{#1}\normalsize}\\}
+
+\newcommand{\exaquestion}[2][0]{\textbf{#1 \ifthenelse{#1=1}{point}{points}} & \themyquestion\stepcounter{myquestion}. & #2\vspace{.2cm}\\}
+
+\newcommand{\exatotal}[1]{\textbf{Total~:\newline #1 \ifthenelse{#1=1}{point}{points}} & ~ & ~\\}
+
+\newcommand{\exadoc}[1]{\emph{DOCUMENT #1}}
+
+\newcommand{\exatable}[1]{\emph{TABLEAU #1}}
+\newcommand{\exatables}[1]{\emph{TABLEAUX #1}}
+
+\newcommand{\exabreak}[0]{\newline\newline}

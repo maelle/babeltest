@@ -1,0 +1,12 @@
+---
+title: "Paper"
+subtitle: "Geography DF"
+sign: "PBd"
+format:
+  html: default
+  lddr-doc-typst: default
+---
+
+# Scope
+
+Culpa aliqua excepteur sit cillum laboris sit sint laborum. Deserunt officia culpa officia sit non non. Esse laborum tempor id ipsum deserunt eiusmod elit in aliqua excepteur cupidatat in do nisi. Id sit voluptate sint reprehenderit sit. Minim proident ullamco esse sunt veniam anim proident ad et culpa officia laboris cupidatat enim.

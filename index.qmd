@@ -1,0 +1,12 @@
+---
+title: "Foundational Discipline"
+listing:
+  categories: false
+  fields: [image, title]
+  contents: [
+    "Introduction/index.qmd",
+  ]
+  type: grid
+---
+
+# The chapters

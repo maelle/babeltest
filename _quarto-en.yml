@@ -1,0 +1,28 @@
+website:
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Foundational Discipline"
+        menu: 
+          - text: "Documents"
+            href: index.qmd
+          - text: "Book"
+            href: https://df.geoviews.ch/_book
+      - text: "Elective Discipline"
+        href: https://oc.geoviews.ch
+
+  sidebar:
+    - title: "Home"
+      style: "floating"
+      collapse-level: 1
+      contents: 
+        - href: index.qmd
+    - section: "Foundational Discipline"
+      href: index.qmd
+      contents:
+        - section: "Introduction"
+          href: Introduction/index.qmd
+          contents: 
+            - section: "Documents"
+              contents: Introduction/Documents/*.qmd
